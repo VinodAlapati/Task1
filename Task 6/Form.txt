@@ -1,0 +1,165 @@
+import React, { Component } from "react";
+
+class Form extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      NameoftheStudent: "",
+      RegistrationNo: "",
+      EmailID: "",
+      Password: "",
+      Course: "",
+      Product:"",
+    };
+  }
+
+  handleNameoftheStudentChange = (event) => {
+    this.setState(
+      {
+        Nameofthestudent: event.target.value,
+      },
+      () => {
+        console.log("Nameofthestudent", this.state.Nameofthestudent);
+      }
+    );
+  };
+
+  handleRegistrationNoChange = (event) => {
+    this.setState(
+      {
+        RegistrationNo: event.target.value,
+      },
+      () => {
+        console.log("RegistrationNo", this.state.RegistrationNo);
+      }
+    );
+  };
+
+  handleEmailIDChange = (event) => {
+    this.setState(
+      {
+        EmailID: event.target.value,
+      },
+      () => {
+        console.log("Email ID", this.state.EmailID);
+      }
+    );
+  };
+  handlePasswordChange = (event) => {
+    this.setState(
+      {
+        Password: event.target.value,
+      },
+      () => {
+        console.log("Password", this.state.EPassword);
+      }
+    );
+  };
+  handleCourseChange = (event) => {
+    this.setState(
+      {
+        Course: event.target.value,
+      },
+      () => {
+        console.log("Course", this.state.Course);
+      }
+    );
+  };
+  handleProductChange = (event) => {
+    this.setState(
+      {
+        Product: event.target.value,
+      },
+      () => {
+        console.log("Product", this.state.Product);
+      }
+    );
+  };
+
+  handleSubmit = (event) => {
+    alert(`${this.state.nameofthestudent} ${this.state.RegistrationNo} 
+    ${this.state.EmailID} ${this.state.Password} 
+    ${this.state.Course} ${this.state.Product}`);
+    event.preventDefault();
+  };
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <br/>
+        <h1>Registration Form</h1>
+        <div>
+          <label>Name of the Student : </label>
+          <input
+            type="text"
+            value={this.state.nameofthestudent}
+            onChange={this.handlenameofthestudentChange}
+          />
+        </div><br/>
+        <div>
+          <label>Registration No : </label>
+          <input
+            type="text"
+            value={this.state.registrationno}
+            onChange={this.handleregistrationnoChange}
+          ></input>
+        </div><br/>
+        <div>
+          <label>Email ID : </label>
+          <input
+          type="text"
+            value={this.state.emailid}
+            onChange={this.handleEmailIDChange}
+          ></input>
+        </div><br/>
+        <div>
+          <label>Password : </label>
+          <input
+            type="text"
+            value={this.state.password}
+            onChange={this.handlePasswordChange}
+          ></input>
+        </div><br/>
+        <div>
+          <label>Course : </label>
+          <select value={this.state.course} onChange={this.handlecourseChange}>
+            <option>Java</option>
+            <option>React</option>
+            <option>Python</option>
+          </select>
+        </div><br/>
+        <div>
+          <label>Product : </label>
+          <input 
+            type="checkbox"
+            value={this.state.checkbox} 
+            onChange={this.handlecheckboxChange}
+            />
+          <checkbox type>Chair</checkbox><centre/><br/>
+          <input 
+            type="checkbox"
+            value={this.state.checkbox} 
+            onChange={this.handlecheckboxChange}
+            />
+          <checkbox type>Television</checkbox><centre/><br/>
+          <input 
+            type="checkbox"
+            value={this.state.checkbox} 
+            onChange={this.handlecheckboxChange}
+            />
+          <checkbox>Washing Machine</checkbox><centre/><br/>
+          <input 
+            type="checkbox"
+            value={this.state.checkbox} 
+            onChange={this.handlecheckboxChange}
+            />
+          <checkbox>TubeLight</checkbox><centre/><br/>
+        </div><br/>
+        <button type="submit">Submit</button>
+      </form>
+    );
+  }
+}
+
+export default Form;
