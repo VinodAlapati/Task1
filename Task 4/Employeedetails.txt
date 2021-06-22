@@ -1,0 +1,18 @@
+import React from 'react'
+
+const Employeedetails = (props) =>
+{
+    console.log(props)
+    return <div><h1>Employee ID:{props.EmployeeId}</h1>
+    <h1>Roll No:{props.RollNo}</h1>
+    <h1>Company:{props.Company}</h1>
+    <h1>Designation:{props.Designation}</h1>
+    <h1>Rating:{props.Rating}</h1>
+
+    </div>
+}
+
+
+
+
+export default Employeedetails;

@@ -1,0 +1,18 @@
+//import logo from './logo.svg';
+import './App.css';
+import itemsearch from './component/Employeedetails';
+import Employeedetails from './component/Employeedetails'
+import Incrementdecrement from './component/Incrementdecrement';
+function App() {
+  return (
+    <div class="App">
+      <h1> Welcome to EmployeeDetails</h1>
+    
+      <Employeedetails EmployeeId="306" RollNo="139" Company="Hakuna Matata" Designation="Software Developer"  Rating = "5"/>
+      
+      <Incrementdecrement/>
+    </div>
+  );
+}
+
+export default App;
