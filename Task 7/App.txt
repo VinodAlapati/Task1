@@ -1,0 +1,46 @@
+import React, { Component } from "react";
+import Welcome from "./component1/Welcome";
+import Hello from "./component1/Hello";
+import Book from "./component1/Book";
+import Hi from "./component1/Hi";
+import Render from "./component1/Render";
+import HocComponent from "./component1/HocComponent";
+import ErrorBoundary from "./component1/ErrorBoundary";
+
+
+
+
+export const A = React.createContext();
+
+export default class App extends Component {
+  
+  constructor(){
+    super();
+    this.state={
+      name:"Good Morning"
+    }
+  }
+
+  change=()=>{
+    this.setState({
+      name:"Sweet Dreams"
+    })
+  }
+
+  render(){
+  return(
+    <div className="App">
+      <Hello />
+      <Welcome />
+      <Render render={
+        (a,b)=>(<Book value={a} increment={b} />)
+      } />
+
+      <Render render={
+        (a,b)=>(<Hi value={a} increment={b} />)
+      } />
+
+
+    </div>
+  )
+}}
