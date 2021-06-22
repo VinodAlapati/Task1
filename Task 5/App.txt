@@ -1,0 +1,19 @@
+import logo from './logo.svg';
+import './App.css';
+import EventBind from './component/EventBind'
+import ItemSearch from './component/ItemSearch'
+import ProductList from './component/ProductList'
+
+
+function App() {
+  return (
+    <div className="App">
+      <EventBind />
+      <ItemSearch />
+      <ProductList />
+    
+    </div>
+  );
+}
+
+export default App;

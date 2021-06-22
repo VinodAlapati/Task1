@@ -1,0 +1,47 @@
+import React from 'react'
+import EmployeeDetail from './EmployeeDetail'
+
+
+//Destructuring props. It will improve the readability of the code. This is one of the ES6 feature
+function ProductList(props) {
+
+    const empList=[
+        {
+            id: 1,
+            employeeName: "Vinod",
+            age: 22,
+            skill: "React"
+        },
+        {
+            id: 2,
+            employeeName: "Siva",
+            age: 28,
+            skill: "Java"
+        },
+        {
+            id: 3,
+            employeeName: "Jhon",
+            age: 35,
+            skill: "Python"
+        }
+    ]
+
+   const {id} = props
+
+  
+
+   const employeeList = empList.map(employee =>(
+       <EmployeeDetail key={employee.id} empdetail={employee}/>
+   ))
+
+ 
+    return (
+        <div>
+            <h1>Product Details</h1>
+            <h1>{id}</h1>
+            {employeeList}
+        </div>
+    )
+}
+
+export default ProductList
