@@ -1,0 +1,18 @@
+import logo from './logo.svg';
+import './App.css';
+import Welcome from './component/welcome';
+import Hello from './component/Hello';
+import JsxExample from './component/JsxExample';
+
+function App() {
+  return (
+    <div class="App">
+      <h1> Welcome to react</h1>
+      <Welcome />
+      <Hello />
+      <JsxExample />
+</div>
+  );
+}
+
+export default App;
